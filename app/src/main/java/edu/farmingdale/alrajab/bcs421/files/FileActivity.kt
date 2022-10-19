@@ -38,7 +38,7 @@ class FileActivity : AppCompatActivity() {
     }
 
     private fun writeToInternalFile() {
-        val outputStream = openFileOutput("myfile", MODE_APPEND)
+        val outputStream = openFileOutput("myfile", MODE_PRIVATE)
         val writer = PrintWriter(outputStream)
 
         // Write each task on a separate line
