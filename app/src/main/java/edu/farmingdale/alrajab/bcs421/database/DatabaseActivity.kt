@@ -1,6 +1,7 @@
 package edu.farmingdale.alrajab.bcs421.database
 
 import android.content.Context
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -36,7 +37,11 @@ class DatabaseActivity : AppCompatActivity() {
     }
 
     private fun readData() {
-        dbHelper.getAll().forEach { Log.d("Data",it.firstName+" , "+ it.lastName) }
+
+        startActivity(
+            Intent(this,MainActivity2::class.java)
+        )
+        //dbHelper.getAll().forEach { Log.d("Data",it.firstName+" , "+ it.lastName) }
 
     }
 
