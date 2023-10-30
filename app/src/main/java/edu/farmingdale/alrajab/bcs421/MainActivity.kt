@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import edu.farmingdale.alrajab.bcs421.database.DatabaseActivity
+import edu.farmingdale.alrajab.bcs421.database.SharedPrefActivity
 import edu.farmingdale.alrajab.bcs421.databinding.ActivityMainBinding
 import edu.farmingdale.alrajab.bcs421.files.FileActivity
 
@@ -20,6 +21,10 @@ class MainActivity : AppCompatActivity() {
         binding.databaseBtn.setOnClickListener {  processDatabase()}
 
         binding.filesBtn.setOnClickListener { processFiles() }
+
+        binding.btnSharedpref.setOnClickListener{
+            startActivity( Intent(this, SharedPrefActivity::class.java) )
+        }
 
         // TODO 01:SP Add another button for saving data using Shared Preferences
         // TODO 02:SP Make an activity that accept the User's first and last name and save/read/update

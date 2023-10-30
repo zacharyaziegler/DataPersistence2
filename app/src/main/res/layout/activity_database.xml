@@ -7,12 +7,35 @@
     android:layout_height="match_parent"
     tools:context=".database.DatabaseActivity">
 
-    <Button
-        android:id="@+id/read_data"
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/et_first2"
+        android:layout_width="122dp"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="Read data" />
+        android:ems="10"
+        android:hint="First Name"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.189"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.048" />
+
+    <EditText
+        android:id="@+id/et_last2"
+        android:layout_width="111dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:ems="10"
+        android:hint="Last Name"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.189"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.176" />
 
     <Button
         android:id="@+id/write_data"
@@ -20,4 +43,11 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:text="Write data" />
+
+    <Button
+        android:id="@+id/read_data"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Read data" />
 </LinearLayout>

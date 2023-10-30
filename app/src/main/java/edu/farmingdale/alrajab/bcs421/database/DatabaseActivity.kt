@@ -5,7 +5,9 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.EditText
 import androidx.room.Room
+import edu.farmingdale.alrajab.bcs421.R
 import edu.farmingdale.alrajab.bcs421.databinding.ActivityDatabaseBinding
 import kotlin.random.Random
 
@@ -28,12 +30,15 @@ class DatabaseActivity : AppCompatActivity() {
         binding.writeData.setOnClickListener { writeData() }
 
 
+
     }
 
     private fun writeData() {
-        dbHelper.addUser(User("Course "+Random.nextInt(6000),
-            "CSC "+Random.nextInt(6000)))
-
+        val first = binding.etFirst2.text
+        val last = binding.etLast2.text
+//        dbHelper.addUser(User("Course "+Random.nextInt(6000),
+//            "CSC "+Random.nextInt(6000)))
+        dbHelper.addUser(User("$first", "$last"))
     }
 
     private fun readData() {
